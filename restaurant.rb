@@ -1,3 +1,4 @@
+require_relative "dish"
 class Restaurant
   attr_accessor :main_dishes, :side_dishes, :customers
 
@@ -51,7 +52,7 @@ class Restaurant
 
     #display side menu for second side choice
     get_side_order
-    puts "Price is #{main_dish.price + side.dish1.price + side_dish2.price}"
+    puts "Price is #{main_dishes.price + side.dish1.price + side_dish2.price}"
     
     #repeat order back to customer
 
