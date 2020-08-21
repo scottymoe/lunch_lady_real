@@ -4,15 +4,20 @@ require_relative "restaurant"
 
 test_customer = Customer.new(100, "Bob")
 
-puts test_customer.name
-puts test_customer.wallet_balance
+# puts test_customer.name
+# puts test_customer.wallet_balance
 
-test_dish = Dish.new("Pizza", 5.00)
+def make_test_restaurant
+  dish = Dish.new("Pizza", 5.00)
+  dish1 = Dish.new("Hamburger", 10.00)
 
-puts test_dish.name
-puts test_dish.price
+  main_dishes = [dish,dish1]
+  side_dishes = [Dish.new("Fries ", 2.99), Dish.new("Salad ", 5.00)]
 
-test_restaurant = Restaurant.new()
+  Restaurant.new(main_dishes, side_dishes)
+end
 
-p test_restaurant.main_dishes
+test_restaurant = make_test_restaurant
+test_restaurant.display_main_menu
+test_restaurant.display_side_menu
 
